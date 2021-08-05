@@ -1,0 +1,53 @@
+/* reset */
+@charset "UTF-8";
+*{margin:0;padding:0;}
+
+/* Layout */
+.tabMenu {
+	width:800px;
+	border:1px solid red;
+	margin: 20px auto;
+	position:relative;
+}
+.tabMenu > dt {
+	width:200px;
+	height:50px;
+	border:1px solid blue;
+	float:left;
+	text-align:center;
+	line-height:50px;
+}
+.tabMenu > dt.on {
+	background:black;
+	color:white;
+}
+.tabMenu > dd {
+	position:absolute;
+	left:0;
+	top:60px;
+	width:100%;
+	border: 1px solid orange;
+	display:none;
+}
+.tabMenu > dd.on{
+	display:block;
+}
+.tabMenu > dd figure{
+	width:60%;
+	float:left;
+	margin-right:10px;
+}
+.tabMenu > dd figure img {
+	width:100%;
+	height:240px;
+	object-fit:cover;
+}
+.tabMenu > dd p{
+	width:calc(40% - 10px);
+	float:left;
+}
+.tabMenu > dd::after{
+	content:"";
+	display:block;
+	clear:both;
+}

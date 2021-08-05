@@ -1,0 +1,51 @@
+/* reset */
+@charset "UTF-8";
+*{margin:0;padding:0;}
+
+/* Layout */
+.wrap {
+	width:800px;
+	border:1px solid red;
+	margin: 20px auto;
+	position:relative;
+}
+.tab {
+	margin-bottom:10px;
+}
+.tab:after {
+	content:"";
+	display:block;
+	clear:both;
+}
+.tab > li {
+	width:200px;
+	height:50px;
+	border:1px solid blue;
+	float:left;
+	text-align:center;
+	line-height:50px;
+}
+.tab > li.on {
+	background:black;
+	color:white;
+}
+.tabContents > section {
+	position:absolute;
+	left:0;
+	top:60px;
+	width:100%;
+	border: 1px solid orange;
+	display:none;
+	transition:all 0.5s ease 0s;
+}
+.tabContents > section.on {
+	display:block;
+	opacity:0;
+	transition:all 0.4s ease 0s;
+}
+.tabContents > section.on.ani {
+	opacity:1;
+}
+.tabContents > section img {
+	width:100%;
+}
